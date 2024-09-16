@@ -1,0 +1,95 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.post-container {
+  width: 400px;
+  height: 500px;
+  margin: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff; /* Cor de fundo do container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra do container */
+  border-radius: 8px; /* Bordas arredondadas, opcional */
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-header .left {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.post-header .left>div {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.post-header .left>div>img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.post-image {
+  background-color: black;
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.post-image>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-icons {
+  font-size: 24px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s; /* Transição suave */
+}
+
+.btn:active {
+  transform: scale(0.95); /* Efeito de afundamento ao pressionar */
+}
+
+.btn-animation {
+  animation: like-animation 0.3s; /* Adiciona a animação */
+}
+
+.liked {
+  color: red;
+}
+
+@keyframes like-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
